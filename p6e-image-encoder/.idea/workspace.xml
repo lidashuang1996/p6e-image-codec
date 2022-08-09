@@ -45,6 +45,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CodeResources\github\p6e-image-codec\p6e-image-encoder\src\main\java" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="club.p6e.image.encoder" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -75,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659960330380</updated>
       <workItem from="1659960332608" duration="11669000" />
-      <workItem from="1660007595871" duration="1489000" />
+      <workItem from="1660007595871" duration="1614000" />
     </task>
     <servers />
   </component>
