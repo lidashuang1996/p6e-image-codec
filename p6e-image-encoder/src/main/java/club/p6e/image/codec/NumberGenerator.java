@@ -1,4 +1,4 @@
-package club.p6e.image.encoder;
+package club.p6e.image.codec;
 
 /**
  * @author lidashuang
@@ -11,7 +11,8 @@ public abstract class NumberGenerator {
     public String run() {
         final String num = this.execute();
         if (num == null || num.length() != NUMBER_DATA_LENGTH) {
-            throw new RuntimeException();
+            throw new RuntimeException(this.getClass() + " number size: "
+                    + (num == null ? 0 : num.length()) + ", no is size " + NUMBER_DATA_LENGTH + " !!");
         }
         return num;
     }
