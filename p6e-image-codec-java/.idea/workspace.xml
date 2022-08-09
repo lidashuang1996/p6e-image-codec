@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a5198691-bd4b-4066-b259-7ec251ac2f77" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/crypto-js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/decryptor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/encryptor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/123.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/123.pie" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/222.pie" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/333.pie" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/444.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/555.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/666.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/Actuator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/ActuatorModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/FileActuator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/NumberGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/NumberGeneratorDefaultImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/P6eImageDecoderCore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/P6eImageEncoderCore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/PasswordGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/PasswordGeneratorDefaultImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/Test.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2D4ZU8HSQI1Dg5OzfgpMqGiFiel" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CodeResources/github/p6e-image-codec/p6e-image-codec-java&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CodeResources\github\p6e-image-codec\p6e-image-encoder\src\main\java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="club.p6e.image.encoder" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.NumberGeneratorDefaultImpl">
+    <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="club.p6e.image.encoder.A" />
+      <module name="p6e-image-codec-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="club.p6e.image.codec.P6eImageEncoderCore" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberGeneratorDefaultImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="club.p6e.image.codec.NumberGeneratorDefaultImpl" />
+      <module name="p6e-image-codec-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="club.p6e.image.codec.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="club.p6e.image.codec.Test" />
+      <module name="p6e-image-codec-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="club.p6e.image.codec.P6eImageEncoderCore" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NumberGeneratorDefaultImpl" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5198691-bd4b-4066-b259-7ec251ac2f77" name="Changes" comment="" />
+      <created>1659960330380</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659960330380</updated>
+      <workItem from="1659960332608" duration="11669000" />
+      <workItem from="1660007595871" duration="1614000" />
+      <workItem from="1660011047548" duration="15604000" />
+      <workItem from="1660046240517" duration="629000" />
+      <workItem from="1660046903959" duration="28000" />
+      <workItem from="1660047451885" duration="4568000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

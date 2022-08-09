@@ -15,4 +15,8 @@ public class NumberGeneratorDefaultImpl extends NumberGenerator {
         return DigestUtils.md5Hex(UUID.randomUUID().toString().replaceAll("-", ""));
     }
 
+
+    public static void main(String[] args) {
+        System.out.println(DigestUtils.md5Hex("5f8a7291f2b74bae8ff942858e26c074"));
+    }
 }

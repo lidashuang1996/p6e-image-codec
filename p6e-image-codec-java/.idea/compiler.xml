@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="p6e-image-encoder" />
+        <module name="p6e-image-codec-java" />
       </profile>
     </annotationProcessing>
   </component>

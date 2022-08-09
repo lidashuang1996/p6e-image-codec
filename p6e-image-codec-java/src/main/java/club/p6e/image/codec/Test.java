@@ -21,9 +21,9 @@ public class Test {
 //        );
 
         System.out.println(System.currentTimeMillis());
-        P6eImageEncoderCore.run(new FileActuator(new File("123.jpeg"), new File("333.pie")));
+        P6eImageEncoderCore.run(new FileActuator(new File("123.jpeg"), new File("444.pie")));
         System.out.println(System.currentTimeMillis());
-        P6eImageDecoderCore.run(new FileActuator(new File("123.pie"), new File("666.jpeg")));
+        P6eImageDecoderCore.run(new FileActuator(new File("123.pie"), new File("888.jpeg")));
         System.out.println(System.currentTimeMillis());
 
 //        System.out.println(new NumberGeneratorDefaultImpl().execute());
