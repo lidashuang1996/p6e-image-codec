@@ -16,9 +16,27 @@ P6eImageCodecEncryptor.prototype.run = function (data) {
     return P6E_ICE.CR.execute(data);
 };
 
+P6eImageCodecEncryptor.AES.prototype.wordArrayToUint8Array = function (wordArray) {
+    const length = wordArray.words.length;
+    const uint8Array = new Uint8Array(length << 2);
+    let word, i, offset = 0;
+    for (i = 0; i < length; i++) {
+        word = wordArray.words[i];
+        uint8Array[offset++] = word >> 24;
+        uint8Array[offset++] = (word >> 16) & 0xff;
+        uint8Array[offset++] = (word >> 8) & 0xff;
+        uint8Array[offset++] = word & 0xff;
+    }
+    return uint8Array;
+}
+
 P6eImageCodecEncryptor.AES.prototype.execute = function (secret, data) {
-    return CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse('LDS'),
-        CryptoJS.enc.Utf8.parse(secret), {mode: CryptoJS.mode.ECB, padding: CryptoJS.pad.Pkcs7}).toString(CryptoJS.enc.Hex);
+    const ciphertext = CryptoJS.AES.encrypt(CryptoJS.lib.WordArray.create(data),
+        CryptoJS.enc.Utf8.parse(secret), {
+            mode: CryptoJS.mode.ECB,
+            padding: CryptoJS.pad.Pkcs7,
+        }).ciphertext;
+    return this.wordArrayToUint8Array(ciphertext);
 };
 
 P6eImageCodecEncryptor.MD5.prototype.execute = function (data) {
@@ -120,7 +138,6 @@ P6eImageCodecEncryptor.Compiler.prototype.get = function () {
 P6eImageCodecEncryptor.Compiler.prototype.execute = function (data) {
     const m = this.get()(P6E_ICE.NG.execute());
     const eData = P6E_ICE.AES.execute(m.secret, data);
-    console.log('x::::' + eData);
     const r = [];
     if (m.enable) {
         r.push(1);
@@ -142,7 +159,7 @@ P6eImageCodecEncryptor.Compiler.prototype.execute = function (data) {
         r.push(0);
     }
     r.push(...eData);
-    return r;
+    return new Uint8Array(r);
 };
 
 
@@ -160,4 +177,4 @@ P6E_ICE.CR.init();
 window.P6E_ICE = P6E_ICE;
 
 
-console.log(P6E_ICE.run([1, 2, 3]));
+console.log(P6E_ICE.run(new Uint8Array([1, 2, 3])));
