@@ -5,38 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5198691-bd4b-4066-b259-7ec251ac2f77" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/crypto-js.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/decryptor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/encryptor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/aws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/123.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/123.pie" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/222.pie" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/333.pie" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/444.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/555.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/666.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/Actuator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/ActuatorModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/FileActuator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/NumberGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/NumberGeneratorDefaultImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/P6eImageDecoderCore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/P6eImageEncoderCore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/PasswordGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/PasswordGeneratorDefaultImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-encoder/src/main/java/club/p6e/image/codec/Test.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/decrypt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/decryptor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/encryptor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/encrypt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +118,7 @@
       <workItem from="1660046240517" duration="629000" />
       <workItem from="1660046903959" duration="28000" />
       <workItem from="1660047451885" duration="4568000" />
+      <workItem from="1660092776978" duration="645000" />
     </task>
     <servers />
   </component>

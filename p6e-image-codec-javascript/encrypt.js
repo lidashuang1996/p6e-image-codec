@@ -1,22 +1,22 @@
-function P6eImageCodecEncryptor() {
+function P6eImageCodecEncrypt() {
 }
 
-P6eImageCodecEncryptor.AES = function () {
+P6eImageCodecEncrypt.AES = function () {
 };
-P6eImageCodecEncryptor.MD5 = function () {
+P6eImageCodecEncrypt.MD5 = function () {
 };
-P6eImageCodecEncryptor.UUID = function () {
+P6eImageCodecEncrypt.UUID = function () {
 };
-P6eImageCodecEncryptor.Compiler = function () {
+P6eImageCodecEncrypt.Compiler = function () {
 };
-P6eImageCodecEncryptor.NumberGenerator = function () {
+P6eImageCodecEncrypt.NumberGenerator = function () {
 };
 
-P6eImageCodecEncryptor.prototype.run = function (data) {
+P6eImageCodecEncrypt.prototype.run = function (data) {
     return P6E_ICE.CR.execute(data);
 };
 
-P6eImageCodecEncryptor.AES.prototype.wordArrayToUint8Array = function (wordArray) {
+P6eImageCodecEncrypt.AES.prototype.wordArrayToUint8Array = function (wordArray) {
     const length = wordArray.words.length;
     const uint8Array = new Uint8Array(length << 2);
     let word, i, offset = 0;
@@ -30,7 +30,7 @@ P6eImageCodecEncryptor.AES.prototype.wordArrayToUint8Array = function (wordArray
     return uint8Array;
 }
 
-P6eImageCodecEncryptor.AES.prototype.execute = function (secret, data) {
+P6eImageCodecEncrypt.AES.prototype.execute = function (secret, data) {
     const ciphertext = CryptoJS.AES.encrypt(CryptoJS.lib.WordArray.create(data),
         CryptoJS.enc.Utf8.parse(secret), {
             mode: CryptoJS.mode.ECB,
@@ -39,26 +39,26 @@ P6eImageCodecEncryptor.AES.prototype.execute = function (secret, data) {
     return this.wordArrayToUint8Array(ciphertext);
 };
 
-P6eImageCodecEncryptor.MD5.prototype.execute = function (data) {
+P6eImageCodecEncrypt.MD5.prototype.execute = function (data) {
     return CryptoJS.MD5(data).toString();
 };
 
-P6eImageCodecEncryptor.UUID.prototype.execute = function () {
+P6eImageCodecEncrypt.UUID.prototype.execute = function () {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
         const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
     });
 };
 
-P6eImageCodecEncryptor.Compiler.key = function (id, version) {
+P6eImageCodecEncrypt.Compiler.key = function (id, version) {
     return "ID@" + id + "_VERSION@" + version;
 }
 
-P6eImageCodecEncryptor.Compiler.intToBytesLittle = function (value) {
+P6eImageCodecEncrypt.Compiler.intToBytesLittle = function (value) {
     return [(value & 255), (value >> 8 & 255), (value >> 16 & 255), (value >> 24 & 255)]
 };
 
-P6eImageCodecEncryptor.Compiler.stringToBytes = function (value) {
+P6eImageCodecEncrypt.Compiler.stringToBytes = function (value) {
     let c;
     const bytes = [];
     const length = value.length;
@@ -83,51 +83,51 @@ P6eImageCodecEncryptor.Compiler.stringToBytes = function (value) {
     return bytes;
 };
 
-P6eImageCodecEncryptor.Compiler.c1 = function (number) {
+P6eImageCodecEncrypt.Compiler.c1 = function (number) {
     const m = P6E_ICE.MD5.execute(number);
     return {
         enable: true,
-        id: P6eImageCodecEncryptor.Compiler.c1.id,
-        version: P6eImageCodecEncryptor.Compiler.c1.version,
+        id: P6eImageCodecEncrypt.Compiler.c1.id,
+        version: P6eImageCodecEncrypt.Compiler.c1.version,
         other: null,
         number: number,
         secret: m
     };
 };
-P6eImageCodecEncryptor.Compiler.c1.id = 1;
-P6eImageCodecEncryptor.Compiler.c1.version = 1;
+P6eImageCodecEncrypt.Compiler.c1.id = 1;
+P6eImageCodecEncrypt.Compiler.c1.version = 1;
 
-P6eImageCodecEncryptor.Compiler.c2 = function (number) {
+P6eImageCodecEncrypt.Compiler.c2 = function (number) {
     this.id = 2;
     this.version = 1;
     const m = P6E_ICE.MD5.execute(P6E_ICE.MD5.execute(number));
     return {
         enable: true,
-        id: P6eImageCodecEncryptor.Compiler.c2.id,
-        version: P6eImageCodecEncryptor.Compiler.c2.version,
+        id: P6eImageCodecEncrypt.Compiler.c2.id,
+        version: P6eImageCodecEncrypt.Compiler.c2.version,
         other: null,
         number: number,
         secret: m
     };
 };
-P6eImageCodecEncryptor.Compiler.c2.id = 2;
-P6eImageCodecEncryptor.Compiler.c2.version = 1;
+P6eImageCodecEncrypt.Compiler.c2.id = 2;
+P6eImageCodecEncrypt.Compiler.c2.version = 1;
 
-P6eImageCodecEncryptor.Compiler.prototype.init = function () {
+P6eImageCodecEncrypt.Compiler.prototype.init = function () {
     this.map = {};
     this.list = [];
-    const keys = Object.keys(P6eImageCodecEncryptor.Compiler);
+    const keys = Object.keys(P6eImageCodecEncrypt.Compiler);
     for (let i = 0; i < keys.length; i++) {
         const key = keys[i];
         if (key.startsWith('c')) {
-            const value = P6eImageCodecEncryptor.Compiler[key];
+            const value = P6eImageCodecEncrypt.Compiler[key];
             this.list.push(value);
-            this.map[P6eImageCodecEncryptor.Compiler.key(value.id, value.version)] = value;
+            this.map[P6eImageCodecEncrypt.Compiler.key(value.id, value.version)] = value;
         }
     }
 };
 
-P6eImageCodecEncryptor.Compiler.prototype.get = function () {
+P6eImageCodecEncrypt.Compiler.prototype.get = function () {
     if (this.list.length <= 0) {
         throw Error();
     } else {
@@ -135,26 +135,26 @@ P6eImageCodecEncryptor.Compiler.prototype.get = function () {
     }
 }
 
-P6eImageCodecEncryptor.Compiler.prototype.execute = function (data) {
+P6eImageCodecEncrypt.Compiler.prototype.execute = function (data) {
     const m = this.get()(P6E_ICE.NG.execute());
     const eData = P6E_ICE.AES.execute(m.secret, data);
     const r = [];
     if (m.enable) {
         r.push(1);
-        r.push(...(P6eImageCodecEncryptor.Compiler.intToBytesLittle(m.id)));
-        r.push(...(P6eImageCodecEncryptor.Compiler.intToBytesLittle(m.version)));
+        r.push(...(P6eImageCodecEncrypt.Compiler.intToBytesLittle(m.id)));
+        r.push(...(P6eImageCodecEncrypt.Compiler.intToBytesLittle(m.version)));
         if (m.other) {
             r.push(1);
-            r.push(...P6eImageCodecEncryptor.Compiler.intToBytesLittle(m.other.length));
+            r.push(...P6eImageCodecEncrypt.Compiler.intToBytesLittle(m.other.length));
             for (let i = 0; i < m.other.length; i++) {
-                const bytes = P6eImageCodecEncryptor.Compiler.stringToBytes(m.other[i]);
-                r.push(...P6eImageCodecEncryptor.Compiler.intToBytesLittle(bytes.length));
+                const bytes = P6eImageCodecEncrypt.Compiler.stringToBytes(m.other[i]);
+                r.push(...P6eImageCodecEncrypt.Compiler.intToBytesLittle(bytes.length));
                 r.push(...bytes);
             }
         } else {
             r.push(0);
         }
-        r.push(...P6eImageCodecEncryptor.Compiler.stringToBytes(m.number));
+        r.push(...P6eImageCodecEncrypt.Compiler.stringToBytes(m.number));
     } else {
         r.push(0);
     }
@@ -163,16 +163,16 @@ P6eImageCodecEncryptor.Compiler.prototype.execute = function (data) {
 };
 
 
-P6eImageCodecEncryptor.NumberGenerator.prototype.execute = function () {
+P6eImageCodecEncrypt.NumberGenerator.prototype.execute = function () {
     return P6E_ICE.MD5.execute(P6E_ICE.UUID.execute().replace(/-/g, ''));
 };
 
-const P6E_ICE = new P6eImageCodecEncryptor();
-P6E_ICE.AES = new P6eImageCodecEncryptor.AES();
-P6E_ICE.MD5 = new P6eImageCodecEncryptor.MD5();
-P6E_ICE.UUID = new P6eImageCodecEncryptor.UUID();
-P6E_ICE.CR = new P6eImageCodecEncryptor.Compiler();
-P6E_ICE.NG = new P6eImageCodecEncryptor.NumberGenerator();
+const P6E_ICE = new P6eImageCodecEncrypt();
+P6E_ICE.AES = new P6eImageCodecEncrypt.AES();
+P6E_ICE.MD5 = new P6eImageCodecEncrypt.MD5();
+P6E_ICE.UUID = new P6eImageCodecEncrypt.UUID();
+P6E_ICE.CR = new P6eImageCodecEncrypt.Compiler();
+P6E_ICE.NG = new P6eImageCodecEncrypt.NumberGenerator();
 P6E_ICE.CR.init();
 window.P6E_ICE = P6E_ICE;
 
