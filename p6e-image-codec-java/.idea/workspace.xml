@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5198691-bd4b-4066-b259-7ec251ac2f77" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/e/decrypt.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/e/decrypt.min.min.js" beforeDir="false" />
-    </list>
+    <list default="true" id="a5198691-bd4b-4066-b259-7ec251ac2f77" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +42,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CodeResources\github\p6e-image-codec\p6e-image-encoder\src\main\java" />
     </key>
@@ -116,6 +115,7 @@
       <workItem from="1660092776978" duration="645000" />
       <workItem from="1660186119515" duration="16011000" />
       <workItem from="1660204263166" duration="202000" />
+      <workItem from="1660211851795" duration="189000" />
     </task>
     <servers />
   </component>

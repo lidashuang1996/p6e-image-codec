@@ -14,10 +14,10 @@ public class Test {
         P6eImageDecoder.init();
 
         System.out.println(System.currentTimeMillis());
-        P6eImageEncoder.run(new FileActuator(new File("123.jpeg"), new File("2.pie")));
+        P6eImageEncoder.run(new FileActuator(new File("001.jpg"), new File("3.pie")));
         System.out.println(System.currentTimeMillis());
-        P6eImageDecoder.run(new FileActuator(new File("1.pie"), new File("a.jpeg")));
-        System.out.println(System.currentTimeMillis());
+//        P6eImageDecoder.run(new FileActuator(new File("1.pie"), new File("a.jpeg")));
+//        System.out.println(System.currentTimeMillis());
 
 //        System.out.println(new NumberGeneratorDefaultImpl().execute());
     }

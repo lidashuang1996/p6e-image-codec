@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e0ac3dfa-9e76-47ad-bcd1-95363fed834c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../p6e-image-codec-java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../p6e-image-codec-java/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-java/src/main/java/club/p6e/image/codec/NumberGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../p6e-image-codec-java/src/main/java/club/p6e/image/codec/NumberGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-java/src/main/java/club/p6e/image/codec/NumberGeneratorDefaultImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../p6e-image-codec-java/src/main/java/club/p6e/image/codec/NumberGeneratorDefaultImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-java/src/main/java/club/p6e/image/codec/P6eImageDecoderCore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-java/src/main/java/club/p6e/image/codec/P6eImageEncoderCore.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../p6e-image-codec-java/src/main/java/club/p6e/image/codec/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../p6e-image-codec-java/src/main/java/club/p6e/image/codec/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e/decrypt.js" beforeDir="false" afterPath="$PROJECT_DIR$/e/decrypt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e/decrypt.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/e/decrypt.min.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/e/encrypt.js" beforeDir="false" afterPath="$PROJECT_DIR$/e/encrypt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/e/index2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +65,7 @@
       <workItem from="1660126831118" duration="26000" />
       <workItem from="1660141462659" duration="6434000" />
       <workItem from="1660185775221" duration="2324000" />
+      <workItem from="1660211916010" duration="102000" />
     </task>
     <servers />
   </component>
