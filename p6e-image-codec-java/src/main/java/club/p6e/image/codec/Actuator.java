@@ -3,10 +3,12 @@ package club.p6e.image.codec;
 import javax.crypto.Cipher;
 import javax.crypto.CipherInputStream;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
+ * 编码解码执行器
+ *
  * @author lidashuang
  * @version 1.0
  */
@@ -39,15 +41,15 @@ public abstract class Actuator {
     /**
      * 加密
      *
-     * @param fileInputStream  待加密的文件
-     * @param fileOutputStream 加密后的文件
-     * @param secret           密钥
+     * @param inputStream  待加密的文件
+     * @param outputStream 加密后的文件
+     * @param secret       密钥
      * @throws Exception 加密过程出现的异常
      */
-    protected static void encrypt(FileInputStream fileInputStream, FileOutputStream fileOutputStream, String secret) throws Exception {
+    protected static void encrypt(InputStream inputStream, OutputStream outputStream, String secret) throws Exception {
         final Cipher cipher = Cipher.getInstance(DEFAULT_CIPHER_ALGORITHM);
         cipher.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(secret.getBytes(), KEY_ALGORITHM));
-        stream(cipher, fileInputStream, fileOutputStream);
+        stream(cipher, inputStream, outputStream);
     }
 
     /**
@@ -67,33 +69,33 @@ public abstract class Actuator {
     /**
      * 解密
      *
-     * @param fileInputStream  待解密的文件
-     * @param fileOutputStream 解密后的文件
-     * @param secret           密钥
+     * @param inputStream  待解密的文件
+     * @param outputStream 解密后的文件
+     * @param secret       密钥
      * @throws Exception 解密过程出现的异常
      */
-    protected static void decrypt(FileInputStream fileInputStream, FileOutputStream fileOutputStream, String secret) throws Exception {
+    protected static void decrypt(InputStream inputStream, OutputStream outputStream, String secret) throws Exception {
         final Cipher cipher = Cipher.getInstance(DEFAULT_CIPHER_ALGORITHM);
         cipher.init(Cipher.DECRYPT_MODE, new SecretKeySpec(secret.getBytes(), KEY_ALGORITHM));
-        stream(cipher, fileInputStream, fileOutputStream);
+        stream(cipher, inputStream, outputStream);
     }
 
     /**
      * 流处理
      *
-     * @param cipher           密钥对象
-     * @param fileInputStream  输入的文件
-     * @param fileOutputStream 输出的文件
+     * @param cipher       密钥对象
+     * @param inputStream  输入的文件
+     * @param outputStream 输出的文件
      * @throws Exception 流处理过程出现的异常
      */
-    private static void stream(Cipher cipher, FileInputStream fileInputStream, FileOutputStream fileOutputStream) throws Exception {
+    private static void stream(Cipher cipher, InputStream inputStream, OutputStream outputStream) throws Exception {
         CipherInputStream cipherInputStream = null;
         try {
-            cipherInputStream = new CipherInputStream(fileInputStream, cipher);
+            cipherInputStream = new CipherInputStream(inputStream, cipher);
             int rLength;
             byte[] bytes = new byte[1024];
             while ((rLength = cipherInputStream.read(bytes)) != -1) {
-                fileOutputStream.write(bytes, 0, rLength);
+                outputStream.write(bytes, 0, rLength);
             }
         } finally {
             try {
@@ -104,15 +106,15 @@ public abstract class Actuator {
                 e.printStackTrace();
             }
             try {
-                if (fileInputStream != null) {
-                    fileInputStream.close();
+                if (inputStream != null) {
+                    inputStream.close();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
             try {
-                if (fileOutputStream != null) {
-                    fileOutputStream.close();
+                if (outputStream != null) {
+                    outputStream.close();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -121,17 +123,16 @@ public abstract class Actuator {
     }
 
     /**
-     * 执行解密
+     * 执行加密
      *
-     * @param model  处理器模型
-     * @param secret 密钥
+     * @param headEncryptActuator 头部加密执行器
      */
-    public abstract void executeEncrypt(String number, PasswordGenerator passwordGenerator) throws Exception;
+    public abstract void performEncryption(HeadEncryptActuator headEncryptActuator) throws Exception;
 
     /**
-     * 执行解加密
+     * 执行解密
      *
-     * @param passwordGenerator 密码生成器
+     * @param headEncryptActuator 头部解密执行器
      */
-    public abstract void executeDecrypt(PasswordGenerator passwordGenerator) throws Exception;
+    public abstract void performDecryption(HeadDecryptActuator headEncryptActuator) throws Exception;
 }

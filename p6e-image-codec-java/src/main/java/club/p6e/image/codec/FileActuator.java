@@ -3,9 +3,11 @@ package club.p6e.image.codec;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.Arrays;
 
 /**
+ * 文件解密加密执行器
+ * 这个文件解密加密执行器是对解密加密执行器的实现
+ *
  * @author lidashuang
  * @version 1.0
  */
@@ -21,12 +23,20 @@ public class FileActuator extends Actuator {
      */
     private final File outputFile;
 
+    /**
+     * 构造方法初始化
+     * @param inputFile 输入的文件
+     * @param outputFile 输出的文件
+     */
     public FileActuator(File inputFile, File outputFile) {
         this.inputFile = inputFile;
         this.outputFile = outputFile;
     }
 
-    public void fileVerification() {
+    /**
+     * 验证是否是文件/文件的路径等
+     */
+    private void fileVerification() {
         if (!inputFile.exists()
                 || !inputFile.isFile()) {
             throw new RuntimeException(this.getClass() + " input file object does not exist or is not a file.");
@@ -37,52 +47,22 @@ public class FileActuator extends Actuator {
     }
 
     @Override
-    public void executeEncrypt(String number, PasswordGenerator passwordGenerator) throws Exception {
+    public void performEncryption(HeadEncryptActuator headEncryptActuator) throws Exception {
         this.fileVerification();
-        final PasswordGenerator.Model model = passwordGenerator.execute(number);
         final FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
-        fileOutputStream.write(model.getActuatorModel().toBytes());
+        final String secret = headEncryptActuator.secret();
+        headEncryptActuator.execute(fileOutputStream);
         fileOutputStream.flush();
-        encrypt(new FileInputStream(inputFile), fileOutputStream, model.getSecret());
+        encrypt(new FileInputStream(inputFile), fileOutputStream, secret);
     }
 
     @Override
-    public void executeDecrypt(PasswordGenerator passwordGenerator) throws Exception {
+    public void performDecryption(HeadDecryptActuator headDecryptActuator) throws Exception {
         this.fileVerification();
         final FileInputStream fileInputStream = new FileInputStream(inputFile);
-        final ActuatorModel actuatorModel = ActuatorModel.stream(fileInputStream);
-        decrypt(fileInputStream, new FileOutputStream(outputFile), passwordGenerator.execute(actuatorModel).getSecret());
+        headDecryptActuator.execute(fileInputStream);
+        final String secret = headDecryptActuator.secret();
+        decrypt(fileInputStream, new FileOutputStream(outputFile), secret);
     }
 
-    public static byte[] hexToByte(String hex) {
-        int byteLen = hex.length() / 2;
-        byte[] ret = new byte[byteLen];
-
-        for(int i = 0; i < byteLen; ++i) {
-            int m = i * 2 + 1;
-            int n = m + 1;
-            int intVal = Integer.decode("0x" + hex.substring(i * 2, m) + hex.substring(m, n));
-            ret[i] = (byte)intVal;
-        }
-
-        return ret;
-    }
-
-    public static String bytesToHex(byte[] bytes) {
-        StringBuilder sb = new StringBuilder();
-        byte[] var2 = bytes;
-        int var3 = bytes.length;
-
-        for(int var4 = 0; var4 < var3; ++var4) {
-            byte aByte = var2[var4];
-            String hex = Integer.toHexString(aByte & 255);
-            if (hex.length() < 2) {
-                sb.append(0);
-            }
-
-            sb.append(hex);
-        }
-
-        return sb.toString();
-    }
 }

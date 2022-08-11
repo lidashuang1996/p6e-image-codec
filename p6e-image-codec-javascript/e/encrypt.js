@@ -179,7 +179,9 @@ P6eImageCodecEncrypt.Compiler.prototype.execute = function (data) {
     } else {
       r.push(0);
     }
-    r.push(...P6eImageCodecEncrypt.Compiler.stringToBytes(m.number));
+    const numberBytes = P6eImageCodecEncrypt.Compiler.stringToBytes(m.number);
+    r.push(...P6eImageCodecEncrypt.Compiler.intToBytesLittle(numberBytes));
+    r.push(...numberBytes);
   } else {
     r.push(0);
   }

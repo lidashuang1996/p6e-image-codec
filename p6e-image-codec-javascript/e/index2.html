@@ -2,49 +2,52 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>点名</title>
+  <title>文件编码解码</title>
+  <script type="application/javascript" src="crypto-js.js"></script>
+  <script type="application/javascript" src="encrypt.js"></script>
+  <script type="application/javascript" src="decrypt.js"></script>
 </head>
 <script type="text/javascript">
-  var arr = new Array();
-  var temp_str ="0";
-  var i = 0;
-  function showPreview(source){
-    var input = source;
-    var reader = new FileReader();
-    reader.readAsText(input.files[0]);
-    reader.onload = function() {
-      if(reader.result) {
-        //显示文件内容
-        temp_str = reader.result;
+  function showPreview(file) {
+    const reader = new FileReader();
+    reader.readAsArrayBuffer(file);
+    reader.onload = function () {
+      if (reader.result) {
+        const a = new Uint8Array(reader.result);
+        let data = P6E_ICD.run(a);
+        let blob = new Blob([data], { type: 'image/jpeg' });
+        data  = null; // 要置null，否则存在内存泄漏风险
+        let url = URL.createObjectURL(blob); // 得到一个图片的url，可以用于图片显示，我是用于pixi的Texture加载图片，如下
+
+        document.getElementById('img').src = url;
+
       }
     };
   }
-  function getDname()
-  {
-    if(temp_str=="0")
-    {
-      alert("请先上传文件");
-    }
-    else
-    {
-      var temp = Math.random()*arr.length;
-      arr = temp_str.split(" ");
-      document.getElementById("text").value=arr[Math.floor(temp)];
-    }
+
+  function f1() {
+    console.log(document.getElementById('f1').files[0]);
+    showPreview(document.getElementById('f1').files[0])
+  }
+
+  function f2() {
+    console.log(document.getElementById('f2').files[0]);
+    showPreview(document.getElementById('f2').files[0])
   }
 </script>
 <body>
-<div id="div" align="center" style="width: 300px;height: 300px; background-color: #FDEF85; margin: auto;">
-  <br>
-  <input type="file" name="file" value="上传文件" onchange="showPreview(this)" />
-  <br>
-  <br>
-  <br>
-  <br>
-  <input type="text" id="text" disabled="false">
-  <br>
-  <br>
-  <input type="button" value="开始点名" onclick="getDname()">
+<div>
+  <span>编码</span>
+  <input type="file" onchange="f1()" id="f1"/>
+</div>
+
+<div>
+  <span>解码</span>
+  <input type="file" onchange="f2()" id="f2"/>
+</div>
+
+<div>
+  <img src="" id="img"/>
 </div>
 </body>
 </html>

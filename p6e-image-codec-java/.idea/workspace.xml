@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5198691-bd4b-4066-b259-7ec251ac2f77" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/decrypt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/decryptor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/encryptor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/encrypt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../p6e-image-codec-javascript/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/e/decrypt.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p6e-image-codec-javascript/e/decrypt.min.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +40,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CodeResources/github/p6e-image-codec/p6e-image-codec-java&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CodeResources\github\p6e-image-codec\p6e-image-encoder\src\main\java" />
@@ -57,13 +53,13 @@
       <recent name="club.p6e.image.encoder" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NumberGeneratorDefaultImpl">
+  <component name="RunManager" selected="应用程序.Test">
     <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="club.p6e.image.encoder.A" />
       <module name="p6e-image-codec-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="club.p6e.image.codec.P6eImageEncoderCore" />
+          <option name="PATTERN" value="club.p6e.image.codec.P6eImageEncoder" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,7 +85,7 @@
       <module name="p6e-image-codec-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="club.p6e.image.codec.P6eImageEncoderCore" />
+          <option name="PATTERN" value="club.p6e.image.codec.P6eImageEncoder" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,8 +95,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NumberGeneratorDefaultImpl" />
-        <item itemvalue="Application.Test" />
+        <item itemvalue="应用程序.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -119,6 +114,8 @@
       <workItem from="1660046903959" duration="28000" />
       <workItem from="1660047451885" duration="4568000" />
       <workItem from="1660092776978" duration="645000" />
+      <workItem from="1660186119515" duration="16011000" />
+      <workItem from="1660204263166" duration="202000" />
     </task>
     <servers />
   </component>

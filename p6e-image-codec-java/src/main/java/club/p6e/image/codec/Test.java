@@ -1,8 +1,6 @@
 package club.p6e.image.codec;
 
 import java.io.File;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 
 /**
  * @author lidashuang
@@ -11,19 +9,14 @@ import java.util.Arrays;
 public class Test {
 
     public static void main(String[] args) throws Exception {
-//        System.out.println(
-//                Arrays.toString(FileActuator.encrypt("123456".getBytes(StandardCharsets.UTF_8), "123456781234567812345678"))
-//        );
-//        System.out.println(
-//                Arrays.toString(FileActuator.decrypt(new byte[] {
-//                        1, 125, -91, -59, -64, 69, 110, -88, 105, 73, 1, -32, -7, -114, 81, -88
-//                }, "123456781234567812345678"))
-//        );
+
+        P6eImageEncoder.init();
+        P6eImageDecoder.init();
 
         System.out.println(System.currentTimeMillis());
-        P6eImageEncoderCore.run(new FileActuator(new File("123.jpeg"), new File("444.pie")));
+        P6eImageEncoder.run(new FileActuator(new File("123.jpeg"), new File("2.pie")));
         System.out.println(System.currentTimeMillis());
-        P6eImageDecoderCore.run(new FileActuator(new File("123.pie"), new File("888.jpeg")));
+        P6eImageDecoder.run(new FileActuator(new File("1.pie"), new File("a.jpeg")));
         System.out.println(System.currentTimeMillis());
 
 //        System.out.println(new NumberGeneratorDefaultImpl().execute());
