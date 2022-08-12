@@ -167,8 +167,9 @@ P6eImageCodecDecrypt.Compiler.prototype.execute = function (data) {
           otherList.push(P6eImageCodecDecrypt.Compiler.bytesToString(contentBytes));
         }
       }
+      const numberLength = P6eImageCodecDecrypt.Compiler.bytesToIntLittle([data[index++], data[index++], data[index++], data[index++]]);
       const numberBytes = [];
-      for (let j = 0; j < 32; j++) {
+      for (let j = 0; j < numberLength; j++) {
         numberBytes.push(data[index++]);
       }
       const r5 = P6eImageCodecDecrypt.Compiler.bytesToString(numberBytes);
